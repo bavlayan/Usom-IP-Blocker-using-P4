@@ -41,6 +41,7 @@ class UsomUrlHelper:
         try:
             thread_arr = []
             loop_last_index = int(len(self.blocked_url_list) / self.thread_count)
+            self.blocked_url_list = self.blocked_url_list[:5]
             first_index = 0
             for i in range(self.thread_count):
                 partial_blocked_list = self.blocked_url_list[first_index:loop_last_index]
@@ -91,9 +92,10 @@ class UsomUrlHelper:
     def create_json_file(self):
         self.__get_blocked_urls_from_usom()
         self.__set_ip()
+        result = list(set(self.blocked_url_list))
         try:
             with open(Constants.BLOCKED_URL_JSON_FILE_NAME, 'w') as json_file:
-                json.dump(self.blocked_url_list, json_file, default=vars)
+                json.dump(result, json_file, default=vars)
                 print(Fore.GREEN + "blocked_url.json file was created...")
         except:
             print(Fore.RED + "An error occured when creating " + Constants.BLOCKED_URL_JSON_FILE_NAME + " json file")
