@@ -12,7 +12,7 @@ import Constants
 
 class UsomUrlHelper:   
     def __init__(self):
-        self.thread_count = 2
+        self.thread_count = 4
         self.blocked_url_list = []
         self.usom_url = Constants.USOM_URL
 
@@ -41,7 +41,6 @@ class UsomUrlHelper:
         try:
             thread_arr = []
             loop_last_index = int(len(self.blocked_url_list) / self.thread_count)
-            self.blocked_url_list = self.blocked_url_list[:5]
             first_index = 0
             for i in range(self.thread_count):
                 partial_blocked_list = self.blocked_url_list[first_index:loop_last_index]
@@ -95,7 +94,7 @@ class UsomUrlHelper:
         result = list(set(self.blocked_url_list))
         try:
             with open(Constants.BLOCKED_URL_JSON_FILE_NAME, 'w') as json_file:
-                json.dump(result, json_file, default=vars)
+                json.dump(result, json_file, default=vars, indent=2)
                 print(Fore.GREEN + "blocked_url.json file was created...")
         except:
             print(Fore.RED + "An error occured when creating " + Constants.BLOCKED_URL_JSON_FILE_NAME + " json file")
