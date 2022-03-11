@@ -42,5 +42,6 @@ def write_json_to_file(json_dic, file_name):
 if __name__ == "__main__":
     switch_settings_dictionary = load_json_by_file_name(Constants.SWITCH_JSON_FILE_NAME)
     usom_blocked_url_list = load_json_by_file_name(Constants.BLOCKED_URL_JSON_FILE_NAME)
+    usom_blocked_url_list = usom_blocked_url_list[:1000]
     result = create_dropped_table_entries()
     write_json_to_file(result, Constants.SWITCH_JSON_FILE_NAME)
