@@ -11,7 +11,10 @@ def create_dropped_table_entries():
         if switch_settings_dictionary is not None and usom_blocked_url_list is not None:
             current_table_entires = switch_settings_dictionary['table_entries']
             for usom_blocked_url in usom_blocked_url_list:
-                blocked_ip = usom_blocked_url['ip']                
+                blocked_ip = usom_blocked_url['ip']
+                if not blocked_ip:
+                    continue       
+
                 drop_object = {
                     'table': 'MyIngress.ipv4_lpm',
                     'match': {
