@@ -1,6 +1,7 @@
 import json
 import Constants
 import sys
+from BlockedUrl import BlockedUrl
 
 switch_settings_dictionary = None
 usom_blocked_url_list = None
@@ -33,7 +34,7 @@ def load_json_by_file_name(json_file_name):
 
 def write_json_to_file(json_dic, file_name):
     with open(file_name, 'w') as outfile:
-        json.dump(json_dic, outfile, default=vars)
+        json.dump(json_dic, outfile, default=vars, indent=2)
     
 if __name__ == "__main__":
     switch_settings_dictionary = load_json_by_file_name(Constants.SWITCH_JSON_FILE_NAME)
