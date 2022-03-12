@@ -28,3 +28,5 @@ VMBox .ova image download [here](https://drive.google.com/file/d/1ZkE5ynJrASMC54
 * ``` table_dump MyIngress.ipv4_lpm ``` on VMBox
 
 ![Drop Rules Image](droprules.jpg)
+
+IP addresses evolve in hexadecimal format. ac43b79b decimal corresponds to ip 172.67.183.155
