@@ -8,3 +8,9 @@ The aim of Usom IP Blocker project prevents all packets that request from host t
 
 ### Topology Structure
 ![Topo Image](topoloji.png)
+
+## Start Setup
+
+In order to create the topology and simulate it on mininet, the virtual machine with p4 ready installed should be downloaded as ova image and run on VirtualBox.
+
+VMBox .ova image download [here](https://drive.google.com/file/d/1ZkE5ynJrASMC54h0aqDwaCOA0I4i48AC/view)
