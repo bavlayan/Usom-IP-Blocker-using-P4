@@ -26,3 +26,5 @@ VMBox .ova image download [here](https://drive.google.com/file/d/1ZkE5ynJrASMC54
 ## See Drop Rules on S1 Switch Table Rules
 * ``` simple_switch_CLI --thrift-port 9090 ``` on VMBox
 * ``` table_dump MyIngress.ipv4_lpm ``` on VMBox
+
+![Drop Rules Image](droprules.jpg)
