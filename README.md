@@ -15,10 +15,10 @@ In order to create the topology and simulate it on mininet, the virtual machine 
 
 VMBox .ova image download [here](https://drive.google.com/file/d/1ZkE5ynJrASMC54h0aqDwaCOA0I4i48AC/view)
 
-* ``` bash python3 UsomUrlHelper.py ``` - create blocked_url.json file
+* ```bash python3 UsomUrlHelper.py ``` - create blocked_url.json file
 * Copy s1-runtime.json file from **/home/p4/tutorials/exercies/basic/pod-topo** in VMBox to local directory
-* ``` bash python3 P4SwitchJsonCreator.py ``` - append drop rules to s1-runtime.json file
+* ```bash python3 P4SwitchJsonCreator.py ``` - append drop rules to s1-runtime.json file
 * Copy s1-runtime.json from local directory to **/home/p4/tutorials/exercies/basic/pod-topo** in VMBox
-* ``` bash cd /home/p4/tutorials/exercises/basic ``` on VMBox
-* ``` bash make clean ``` on VMBox
-* ``` bash make run ``` on VMBox
+* ```bash cd /home/p4/tutorials/exercises/basic ``` on VMBox
+* ```bash make clean ``` on VMBox
+* ```bash make run ``` on VMBox
